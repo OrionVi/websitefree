@@ -824,7 +824,7 @@ h5,
     content: '';
     width: 30px;
     height: 1px;
-    background: #ff802a;
+    background: rgb(102, 255, 0);
     margin: 0 auto
 }
 
@@ -1359,7 +1359,7 @@ h5,
 .ftco-navbar-light .navbar-nav>.nav-item .nav-link.active2 {
     background: 0 0;
     background: 0 0;
-    color: #ff802a
+    color: #00ffff
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item .nav-link.active2 span:before {
@@ -1376,7 +1376,7 @@ h5,
     height: 2px;
     bottom: 0;
     left: 0;
-    background: #ff802a;
+    background: #00ff40;
     visibility: visible;
     -webkit-transform: scaleX(0);
     -moz-transform: scaleX(0);
@@ -1635,4 +1635,4 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .pointer {
-    cursor: pointerh
+    cursor: default
