@@ -1,2 +1,0 @@
-# groovywebsite
-simple groovy
