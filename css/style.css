@@ -349,7 +349,7 @@ code {
     outline: none;
     background-color: rgba(0, 0, 0, 0);
     color: var(--color);
-    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
     transition: all 600ms ease;
 }
 
