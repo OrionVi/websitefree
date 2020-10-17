@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52771679-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-52771679-1');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Meta Data -->
+    <meta name="theme-color" content="#14bae4">
+
+    <meta name="revisit-after" content="2 days">
+    <meta name="keywords" content="AlexFlipnote, Twitter, Developer, Github, TypingTest, Speedtest, speed, test, typing, fast, wpm, cpm, languages, multilanguage, english">
+
+    <link rel="canonical" href="https://typing.alexflipnote.dev/" />
+    <meta property="og:url" content="https://typing.alexflipnote.dev/" />
+    <meta property="og:site_name" content="AlexFlipnote" />
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@AlexFlipnote" />
+
+    <link href="/type/assets/css/modesta.css" type="text/css" rel="stylesheet">
+    <link href="/type/assets/css/custom.css" type="text/css" rel="stylesheet">
+    <script src="/type/assets/js/main.js" type="text/javascript" charset="utf-8"></script>
+    <title>Typing test</title>
+    <meta content="https://twemoji.maxcdn.com/2/72x72/1f1fa-1f1f8.png" property="og:image" />
+    <link rel="icon" type="image/x-icon" href="https://twemoji.maxcdn.com/2/72x72/1f1fa-1f1f8.png">
+    <meta content="Typing test" property="og:title" />
+
+    <meta content="How fast can you type? Find out today with a typing test!" property="og:description" />
+    <meta content="How fast can you type? Find out today with a typing test!" name="description" />
+    <meta property="og:locale" content="en_GB" />
+</head>
+
+<body class="github-font-standard dark-theme" data-small-screen="Your screen is too small to take the typing test...">
+    <section id="toggle-theme" onclick="toggle_theme()">
+        <div class="theme-icon"></div>
+    </section>
+    <div class="typing-test-container">
+        <div class="title-container">
+            <a href="/languages" class="flag-emoji tooltip" data-tooltip="Select languages...">
+          <img src="https://twemoji.maxcdn.com/2/72x72/1f1fa-1f1f8.png">
+        </a>
+            <div class="intro-container">
+                <p class="title">Typing test
+                    <a href="/about"><svg width="22px" height="22px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></a>
+                    <span class="label sun-flower black-text" style="vertical-align: text-top; margin-top: 1.5em;">BETA</span>
+                </p>
+
+            </div>
+        </div>
+        <div class="score">
+            <p>Seconds: <span id="seconds">60</span></p>
+            <p class="tooltip" data-tooltip="Raw CPM: 0" id="cpm-tp">CPM: <span id="cpm">0</span></p>
+            <p class="tooltip" data-tooltip="Raw WPM: 0" id="wpm-tp">WPM: <span id="wpm">0</span></p>
+            <p>Errors: <span id="errors">0</span></p>
+            <button id="reset">Reset</button>
+        </div>
+        <div id="render-text" data-finish="Finish"></div>
+        <div id="final-score-container">
+            <h1 id="final-score" data-text="Your final score: [CPM] CPM (which is [WPM] WPM)">Your final score: [CPM] CPM (which is [WPM] WPM)</h1>
+            <p id="final-text-win" data-text="Good job, you typed all [WORDS] words flawlessly!">Good job, you typed all [WORDS] words flawlessly!</p>
+            <p id="final-text-fail" data-text="Technically you had a score of [RAW_CPM] CPM, but you made [WRONG] errors, which were not counted for your actual score.">Technically you had a score of [RAW_CPM] CPM, but you made [WRONG] errors, which were not counted for your actual score.</p>
+            <p class="emerald-text" id="final-break">Take a 2 minute break, you&#39;ve earned it.</p>
+        </div>
+        <textarea name="" id="your-attempt" autofocus autocomplete="off" placeholder="The test starts whenever you start typing."></textarea>
+
+        <script>
+            window.TranslationData = {
+                FINISH_WORD: "Finish the word"
+            }
+
+            const speedtest = new WordManager(['able', 'about', 'above', 'act', 'add', 'after', 'again', 'against', 'age', 'ago', 'air', 'all', 'also', 'always', 'am', 'among', 'an', 'and', 'animal', 'answer', 'any', 'appear', 'are', 'area', 'as', 'ask', 'at', 'back', 'base', 'be', 'beauty', 'bed', 'been', 'before', 'began', 'begin', 'behind', 'best', 'better', 'between', 'big', 'bird', 'black', 'blue', 'boat', 'body', 'book', 'both', 'box', 'boy', 'bring', 'brought', 'build', 'busy', 'but', 'by', 'call', 'came', 'can', 'car', 'care', 'carry', 'cause', 'certain', 'change', 'check', 'children', 'city', 'class', 'clear', 'close', 'cold', 'come', 'common', 'complete', 'contain', 'correct', 'could', 'country', 'course', 'cover', 'cross', 'cry', 'cut', 'dark', 'day', 'decide', 'deep', 'develop', 'did', 'differ', 'direct', 'distant', 'do', 'does', 'dog', "don't", 'done', 'door', 'down', 'draw', 'drive', 'dry', 'during', 'each', 'early', 'earth', 'ease', 'east', 'eat', 'eight', 'end', 'enough', 'even', 'ever', 'every', 'everything', 'example', 'eye', 'face', 'fact', 'fall', 'family', 'far', 'farm', 'fast', 'father', 'feel', 'feet', 'few', 'field', 'figure', 'fill', 'final', 'find', 'fine', 'fire', 'first', 'fish', 'five', 'fly', 'follow', 'food', 'foot', 'for', 'force', 'form', 'found', 'four', 'free', 'friend', 'from', 'front', 'full', 'game', 'gave', 'get', 'girl', 'give', 'go', 'gold', 'good', 'got', 'govern', 'great', 'green', 'ground', 'group', 'grow', 'had', 'half', 'hand', 'happen', 'hard', 'has', 'have', 'he', 'head', 'hear', 'heard', 'heat', 'help', 'her', 'here', 'high', 'him', 'his', 'hold', 'home', 'horse', 'hot', 'hour', 'house', 'how', 'hundred', 'idea', 'if', 'in', 'inch', 'interest', 'is', 'island', 'it', 'just', 'keep', 'kind', 'king', 'knew', 'know', 'land', 'language', 'large', 'last', 'late', 'laugh', 'lay', 'lead', 'learn', 'leave', 'left', 'less', 'let', 'letter', 'life', 'light', 'like', 'line', 'list', 'listen', 'little', 'live', 'long', 'look', 'lot', 'love', 'low', 'machine', 'made', 'main', 'make', 'man', 'many', 'map', 'mark', 'may', 'me', 'mean', 'measure', 'men', 'might', 'mile', 'mind', 'mineral', 'minute', 'miss', 'money', 'moon', 'more', 'morning', 'most', 'mother', 'mountain', 'move', 'much', 'music', 'must', 'my', 'name', 'near', 'need', 'never', 'new', 'next', 'night', 'nine', 'no', 'north', 'note', 'nothing', 'notice', 'noun', 'now', 'number', 'numeral', 'object', 'of', 'off', 'often', 'oh', 'old', 'on', 'once', 'one', 'only', 'open', 'or', 'order', 'other', 'our', 'out', 'over', 'own', 'page', 'paint', 'paper', 'part', 'pass', 'pattern', 'people', 'perhaps', 'person', 'picture', 'piece', 'place', 'plain', 'plan', 'plane', 'plant', 'play', 'point', 'port', 'pose', 'possible', 'pound', 'power', 'press', 'problem', 'produce', 'product', 'pull', 'put', 'question', 'quick', 'rain', 'ran', 'reach', 'read', 'ready', 'real', 'record', 'red', 'remember', 'rest', 'right', 'river', 'road', 'rock', 'room', 'round', 'rule', 'run', 'said', 'same', 'saw', 'say', 'school', 'science', 'sea', 'second', 'see', 'seem', 'self', 'sentence', 'serve', 'set', 'seven', 'several', 'shape', 'she', 'ship', 'short', 'should', 'show', 'side', 'simple', 'since', 'sing', 'sit', 'six', 'size', 'sleep', 'slow', 'small', 'snow', 'so', 'some', 'something', 'song', 'soon', 'sound', 'south', 'special', 'speed', 'spell', 'stand', 'standard', 'star', 'start', 'state', 'stay', 'step', 'still', 'stood', 'stop', 'story', 'street', 'strong', 'study', 'such', 'sun', 'sure', 'surface', 'table', 'tail', 'take', 'talk', 'teach', 'tell', 'ten', 'test', 'than', 'that', 'the', 'their', 'them', 'then', 'there', 'these', 'they', 'thing', 'think', 'this', 'those', 'though', 'thought', 'thousand', 'three', 'through', 'time', 'to', 'together', 'told', 'too', 'took', 'top', 'toward', 'town', 'travel', 'tree', 'true', 'try', 'turn', 'two', 'typing', 'under', 'unit', 'until', 'up', 'us', 'use', 'usual', 'very', 'voice', 'vowel', 'wait', 'walk', 'want', 'war', 'warm', 'was', 'watch', 'water', 'way', 'we', 'week', 'weight', 'well', 'went', 'were', 'west', 'what', 'wheel', 'when', 'where', 'which', 'while', 'white', 'who', 'whole', 'why', 'will', 'wind', 'with', 'wonder', 'wood', 'word', 'work', 'world', 'would', 'write', 'year', 'yes', 'yet', 'you', 'young', 'your'], "render-text")
+            speedtest.pickWords()
+            speedtest.render()
+
+            document.body.addEventListener("click", event => {
+                document.getElementById("your-attempt").focus()
+            })
+
+            document.getElementById("reset").addEventListener("click", event => {
+                speedtest.reset()
+            })
+
+            document.getElementById("your-attempt").addEventListener("keydown", event => speedtest.keydown(event))
+        </script>
+    </div>
+</body>
+
+</html>
