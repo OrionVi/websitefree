@@ -1,276 +1,117 @@
-<!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="icon" href="https://cdn.discordapp.com/avatars/755871800646303804/3bd26c726aa5635c06d940ee6aaa6ad9.png?size=128" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/0cc17c1ede.js" crossorigin="anonymous" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="description" content="¡Es hora de deshacerte de algunos bots! xelS será tu mano derecha, brindándote increíbles posibilidades. Desde comandos que ayudarán a mantener la actividad, hasta comandos que te ayudarán en la administración u moderación en tu servidor."
-    />
-    <meta name="keywords" content="Discord bot, fun, moderation, configuration, español, ayuda, configuracion, moderación, juegos, diversión" />
-    <meta name="author" content="Alan.#9295 (Usuario de Discord)" />
-    <meta property="og:image" content="https://cdn.discordapp.com/avatars/755871800646303804/3bd26c726aa5635c06d940ee6aaa6ad9.png?size=128" />
-    <script src="https://js.chargebee.com/v2/chargebee.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-    <title>xelS</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-52771679-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-52771679-1');
+    </script>
+
+    <title>AlexFlipnote</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Meta Data -->
+    <meta name="theme-color" content="#14bae4">
+    <meta content="https://alexflipnote.dev/assets/images/profile.png" property="og:image" />
+    <link rel="icon" type="image/x-icon" href="https://alexflipnote.dev/assets/images/favicon.ico">
+    <meta content="AlexFlipnote" property="og:title" />
+
+    <meta content="My personal homepage" property="og:description" />
+    <meta content="My personal homepage" name="description" />
+
+    <meta name="revisit-after" content="2 days">
+    <meta name="keywords" content="AlexFlipnote, Twitter, Developer, Github">
+
+    <meta property="og:locale" content="en_GB" />
+    <link rel="canonical" href="https://alexflipnote.dev/" />
+    <meta property="og:url" content="https://alexflipnote.dev/" />
+    <meta property="og:site_name" content="AlexFlipnote" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@AlexFlipnote" />
+
+    <!-- CSS -->
+    <link href="https://modesta.alexflipnote.dev/css/modesta.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/custom.css" type="text/css" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-          <img
-            src="https://cdn.discordapp.com/avatars/755871800646303804/3bd26c726aa5635c06d940ee6aaa6ad9.png?size=128"
-            width="80"
-            height="80"
-            alt="xelS Logo"
-          />
-        </a>
-            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> <i class="fa fa-bars fa-2x"></i>
-        </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" id="home-nav"><span>Inicio</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a href="/commands.html" class="nav-link" id="guides-nav"
-                ><span>Comandos</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://discord.gg/24hAbYE"
-                class="nav-link"
-                target="_blank"
-                ><span>Mi soporte</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                href="https://top.gg/bot/590183556740022272/vote"
-                class="nav-link"
-                target="_blank"
-                id="vote-nav"
-                ><span>Votar</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <section class="hero-wrap">
-      <div class="container container-landing">
-        <div
-          class="row d-md-flex slider-text align-items-center justify-content-center"
-        >
-          <div class="col-lg-6 animate__animated animate__bounce">
-            <div class="text">
-              <span class="subheading">BOT DE <strong>DISCORD</strong></span>
-              <h1>xelS</h1>
-              <p>
-                ¡Un bot multipropósitos en español con comandos de diversión,
-                moderación, configuración y mucho más!
-              </p>
-              <div><br /></div>
-              <a
-                href="https://discordapp.com/oauth2/authorize?client_id=755871800646303804&scope=bot&permissions=8"
-                class="btn2 btn2-primary px-4 shadow"
-                s
-                target="_blank"
-                style="font-size: 15px;font-weight: 700; padding-bottom: 1.3rem!important; padding-top: 1.3rem!important; margin-top: 20px !important;"
-                ><img
-                  src="https://cdn.glitch.com/65bcf8e2-541c-4bff-941a-acc36f7332ce%2FdiscordLogo.svg?v=1601875831377"
-                  alt="Discord Logo"
-                  title="Logo de xelS"
-                  style="margin-right: 15px;"
-                />AÑADIR A DISCORD</a
-              >
-            </div>
-          </div>
-          <a
-            href="https://discord.gg/24hAbYE"
-            class="col-lg-6 landing-logo animate__slower"
-            target="_blank"
-            id="mainlogo"
-            ><img
-              class="landing-logo"
-              src="https://media.discordapp.net/attachments/755951872355074079/764855335864369163/gthr.png"
-              alt="xelS Logo"
-          /></a>
-            </div>
-        </div>
-        </section>
-        <section class="ftco-section ftco-no-pt">
+<body class="github-font-standard">
+    <div class="fullscreen">
+        <div class="background" style="background-image: url('assets/images/background.jpg');"></div>
+        <div class="center-object">
             <div class="container">
-                <div class="row justify-content-center mt-2 py-5">
-                    <div class="col-md-5 heading-section text-center">
-                        <h2 class="mb-4">Desarrolladores</h2>
+                <section class="me unset">
+                    <div class="avatar-container">
+                        <img draggable="false" src="assets/images/profile.png" class="image-title">
                     </div>
-                </div>
-                <div class="row" style="justify-content: center;">
-                    <div class="col-md-4 text-center d-flex ">
-                        <div class="services-1 bg-light shadow-sm rounded">
-                            <img src="https://media.discordapp.net/attachments/757997786103808133/765172356641062922/tumblr_pw6oe3Nd2E1ypmzhso1_500.gif" alt="Mi hermano xd" style="width: 100px;vertical-align: inherit;border-radius: 50%;" />
-                            <div class="desc">
-                                <h3 class="mb-5" style="font-family: open sans,sans-serif;font-size: 23px;font-weight: 700;">
-                                    <strong>Diablo</strong>#5874
-                                </h3>
-                                <p>¡Desarrollador de xelS!</p>
-                            </div>
-                        </div>
+                    <div class="unset">
+                        <h1 class="title monospace">AlexFlipnote</h1>
+                        <p class="undertitle monospace"><i class="emoji norway"></i> I do coding, yes.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#1b1a1a"
-        fill-opacity="1"
-        d="M0,0L40,10.7C80,21,160,43,240,85.3C320,128,400,192,480,192C560,192,640,128,720,112C800,96,880,128,960,149.3C1040,171,1120,181,1200,160C1280,139,1360,85,1400,58.7L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-      ></path>
-    </svg>
-        <footer class="ftco-footer ftco-section">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-md">
-                        <div class="ftco-footer-widget mb-4">
-                            <h2 class="ftco-heading-2">Sobre nosotros</h2>
-                            <p>
-                                Somos un grupo pequeño de <br />desarrolladores, de 2 personas.
-                                <br />Que tienen como propósito brindarte<br />un bot que te sea gran utilidad.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="ftco-footer-widget mb-4 ml-md-4">
-                            <h2 class="ftco-heading-2">Elección</h2>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="https://discordapp.com/oauth2/authorize?client_id=755871800646303804&scope=bot&permissions=8" target="_blank">Añadir a xelS</a
-                  >
-                </li>
-                <li>
-                  <a href="https://discord.gg/24hAbYE" target="_blank"
-                    >Entrar al soporte</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Extra</h2>
-              <ul class="list-unstyled">
-                <li><a href="#">Créditos</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p>
-                            Copyright &copy;
-                            <script type="38e398e541bf3a112ce2093e-text/javascript">
-                                document.write(new Date().getFullYear());
-                            </script>
-                            xelS - Todos los derechos reservados.
-                        </p>
-                    </div>
+                </section>
+                <div class="buttons">
+                    <a href="https://discord.gg/DpxkY3x" class="btn discord-dropshadow animation hover" target="_blank">Discord</a>
+                    <a href="https://github.com/AlexFlipnote" class="btn github-dropshadow animation hover" target="_blank">GitHub</a>
+                    <a href="https://twitter.com/AlexFlipnote" class="btn twitter-dropshadow animation hover" target="_blank">Twitter</a>
+                    <a href="/branding" class="btn sun-flower-dropshadow black-text animation hover">Branding</a>
+                    <a href="https://typing.alexflipnote.dev/" class="btn alizarin-dropshadow animation hover" target="_blank">Typing test</a>
+                    <a href="/cdn-cgi/l/email-protection#3d4f5252497d5c5158455b51544d535249581359584b" class="btn emerald-dropshadow animation hover">Email</a>
                 </div>
             </div>
-        </footer>
-
-        <div id="ftco-loader" class="show fullscreen">
-            <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
         </div>
 
-        <script src="js/jquery.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/jquery-migrate-3.0.1.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/popper.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/bootstrap.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/jquery.waypoints.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/jquery.stellar.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/jquery.magnific-popup.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/scrollax.min.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script src="js/main.js" type="38e398e541bf3a112ce2093e-text/javascript"></script>
+        <span class="info-button" onclick="scroll_to('information')"><div id="fade" class="arrow bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.32 291.98" class="white-fill">
+          <path d="M466.5,15.5L466,15c-19.8-19.8-52-19.8-71.9,0L240.8,168.3L87.2,14.8C67.4-5,35.2-5,15.4,14.8l-0.5,0.5 C-5,35.2-5,67.4,14.8,87.2l186.6,186.6c0.9,1,1.8,2,2.7,3v0c3.8,3.8,8.1,6.9,12.7,9.3c17,9,38.1,7.7,53.9-3.9 c2.2-1.6,4.4-3.4,6.4-5.4L466.5,87.4C486.4,67.6,486.4,35.4,466.5,15.5z"/>
+        </svg>
+      </div></span>
+    </div>
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132865633-3" type="38e398e541bf3a112ce2093e-text/javascript"></script>
-        <script type="38e398e541bf3a112ce2093e-text/javascript">
-            window.dataLayer = window.dataLayer || [];
+    <section class="container" id="information">
+        <div class="box-container">
+            <h3 class="title emerald-text"><i class="emoji alexcoffee"></i> Information:</h3>
+            <div class="info-container">
+                <p>
+                    Hello, my name is <span class="emerald-text">Alex</span>, but known as <span class="emerald-text">AlexFlipnote</span> over the internet. I'm a Developer that spends time coding scripts and building websites. Been coding for around
+                    <span class="sun-flower-text" id="years-of-coding">[INSERT TIME HERE, YES]</span> now and still on the road to learn more. Current coding languages I know fair enough are <span class="emerald-text">HTML, CSS, SCSS, JavaScript, Python</span>                    and <span class="emerald-text">SQL</span>.
+                </p>
+            </div>
+        </div>
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+        <div class="box-container">
+            <h3 class="title emerald-text"><i class="emoji alexnerd"></i> Projects:</h3>
+            <div class="info-container">
+                <p><a href="https://alexflipnote.dev/homepage/" target="_blank">AlexFlipnote/homepage</a>, website that can be used as a personal start page with clock and date.</p>
+                <p><a href="https://github.com/AlexFlipnote/CoffeeAPI" target="_blank">CoffeeAPI</a>, simple, yet powerful API providing random images.</p>
+                <p><a href="https://github.com/AlexFlipnote/diskspace" target="_blank">diskspace</a>, making it possible to use Linux df & du command on Windows</p>
+                <p><a href="https://github.com/xelA/discord_bot.py" target="_blank">discord_bot.py</a>, a simple discord bot that helps you get started within discord.py.</p>
+                <p><a href="https://github.com/AlexFlipnote/Discord_Theme" target="_blank">Discord_Theme</a>, discord theme that changes the CSS style</p>
+                <p><a href="https://github.com/AlexFlipnote/ModestaCSS" target="_blank">ModestaCSS</a>, a clean CSS framework made to match my website design</p>
+                <p><a href="https://typing.alexflipnote.dev/" target="_blank">Typing test</a>, how fast can you type? Find out today with a typing test!</p>
+                <p><a href="https://xela.dev/" target="_blank">xelA</a>, the only bot your Discord would ever need, it's time to ditch Mee6 and Tickets</p>
+            </div>
+        </div>
+    </section>
 
-            gtag('config', 'UA-132865633-3');
-        </script>
-        <script type="38e398e541bf3a112ce2093e-text/javascript">
-            $(document).ready(function() {
+    <footer class="center box-container primary no-border-radius">
+        <p class="no-margin">
+            <a href="https://github.com/AlexFlipnote/alexflipnote.github.io/blob/master/LICENSE" target="_blank">LICENSE</a> | AlexFlipnote |
+            <a href="https://github.com/AlexFlipnote/alexflipnote.github.io" target="_blank">Source</a>
+        </p>
+    </footer>
 
-                if (document.URL.includes("guide")) {
-                    $("#guides-nav").addClass('active2');
-
-                } else if (document.URL.includes("vote")) {
-                    $("#vote-nav").addClass('active2');
-
-                } else if (document.URL.includes("premium")) {
-                    $("#store-nav").addClass('active2');
-
-                } else if (document.URL.includes("terms") || document.URL.includes("credits") || document.URL.includes("privacy")) {
-
-                } else if (document.URL.includes("leaderboard")) {
-                    $("#leaderboard-nav").addClass('active2');
-                } else {
-                    $("#home-nav").addClass('active2');
-                }
-
-
-
-            });
-        </script>
-        <script defer type="38e398e541bf3a112ce2093e-text/javascript">
-            $(document).ready(function() {
-
-                $(".services-1").hover(
-                    function() {
-                        $(this).addClass('shadow');
-                    },
-                    function() {
-                        $(this).removeClass('shadow');
-                    }
-                );
-            });
-        </script>
-        <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="38e398e541bf3a112ce2093e-|49" defer=""></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
 
 </html>
