@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="title" content="♡">
+    <meta propery="description" content="♡">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/icon.png">
+    <link rel="stylesheet" href="musical/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css" integrity="sha512-kb1CHTNhoLzinkElTgWn246D6pX22xj8jFNKsDmVwIQo+px7n1yjJUZraVuR/ou6Kmgea4vZXZeUDbqKtXkEMg==" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="assets/img/icon.png">
+    <title>Little</title>
+</head>
+
+<body>
+    <div id="container">
+        <video id="background_video" loop muted></video>
+        <div id="video_cover"></div>
+        <div id="particles-js"></div>
+        <section id="main_content">
+            <div id="head" class="animate__animated animate__fadeIn">
+                <h1>Diablo Halow#5405</h1>
+                <a href="https://steamcommunity.com/id/OrionVi" target="_blank"><i class="fab fa-steam desc_icons"></i></a>
+                <i class="fas fa-play desc_icons" onclick="ChangeMuteState()"></i>
+                <a href="https://github.com/OrionVI" target="_blank"><i class="fab fa-github desc_icons"></i></a>
+            </div>
+        </section>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="musical/assets/js/app.js"></script>
+    <script src="musical/assets/js/bideo.js"></script>
+    <script src="musical/assets/js/main.js"></script>
+    <script>
+        function ChangeMuteState() {
+            var video = document.getElementById("background_video");
+            var video_cover = document.getElementById("video_cover");
+            if (video.paused) {
+                video.play();
+                video_cover.setAttribute('style', 'display:none;')
+            }
+            video.muted = !video.muted;
+        }
+    </script>
+    </script>
+</body>
+
+</html>
