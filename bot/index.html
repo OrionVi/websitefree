@@ -1,390 +1,318 @@
 <!DOCTYPE html>
-<html lang="en" class=" htmlimports">
+<html lang="en">
 
 <head>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131766739-1" type="c81aa78a559e5ac29d52010c-text/javascript"></script>
-    <script type="c81aa78a559e5ac29d52010c-text/javascript">
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-131766739-1');
+    <title>dsc.gg | Short Links</title>
+    <meta charset="UTF-8">
+    <meta property="og:site_name" content="Get your sleek invite today!">
+    <meta property="og:title" content="DSC.GG Free Vanity Links">
+    <meta property="og:image" content="https://static.thenounproject.com/png/261370-200.png">
+    <meta property="og:description" content="We're bringing you the easiest way to get a custom vanity url for your server, bot, or Discord server template. No catches, no splash pages, and no ads - just a sleek invite for your needs.">
+    <meta name="theme-color" content="#7289DA">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
+    <link href="./css/hover.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <script async src="https://arc.io/widget.js#ZSvK9Soa"></script>
+    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.LogRocket && window.LogRocket.init('bvkayg/dscgg');
     </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://unpkg.com/notie"></script>
+    <link href="./css/style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
-    <meta name="author" content="dannypent">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="kelA Bot Discord">
-    <meta name="description" content="kelA Bot - A Multipurpose Discord bot">
-    <meta property="og:image" content="http://puritybot.com/img/purity_avatar.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="200">
-    <meta property="og:image:height" content="200">
-    <script data-ad-client="ca-pub-3390506714110523" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c81aa78a559e5ac29d52010c-text/javascript"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>kelA Bot - Multipurpose Discord Bot</title>
-
-    <link rel="shortcut icon" href="img/purity_avatar.png">
-
-    <link rel="stylesheet" href="./Purity Bot_files/plugins.css">
-
-    <link rel="stylesheet" href="./Purity Bot_files/search.css">
-
-    <link href="./Purity Bot_files/switcher.css" rel="stylesheet">
-
-    <link href="./Purity Bot_files/styles.css" rel="stylesheet" id="colors">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="./js/typed.js"></script>
+    <script src="./js/quest.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    <style>
-        .butn.white {
-            background: #fff;
-            cursor: pointer;
-            font-weight: 600;
-            color: #4e54c8;
-            letter-spacing: 1px;
-            font-size: 13px;
-            line-height: 10px;
-            padding: 14px 10px;
-            border-radius: 5px;
-            text-transform: uppercase;
-            display: inline-block;
-            vertical-align: middle;
-            -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0);
-            position: relative;
-            -webkit-transition: all linear 100ms;
-            transition: all linear 100ms;
-            border: none;
-        }
-
-        .onepage-header .navbar-nav .nav-link {
-            font-size: 12px !important;
-        }
-    </style>
-
-
-
-    <div class="main-wrapper">
-
-        <header class="header onepage-header" data-scroll-index="0">
-            <div class="container">
-                <div class="menu_area alt-font">
-
-                    <nav class="navbar navbar-expand-lg no-padding">
-                        <div class="container sm-position-relative">
-                            <div class="navbar-header navbar-header-custom">
-
-                                <a href="/" class="navbar-brand white-logo active"><img id="logo" src="./Purity Bot_files/logo-purity-bot.png" alt="logo"></a>
-
-                            </div>
-                            <div class="navbar-toggler"></div>
-                            <ul class="navbar-nav ml-auto" id="nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="/">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="commands.html">Commands</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://discord.gg/sZEDPx3"><i class="fab fa-discord"></i>Support</a>
-                                </li>
-                            </ul>
-                            <div class="margin-20px-left sm-display-none">
-                                <a class="butn white" href="https://shorturl.at/gpKX0"><i class="fab fa-discord"></i> ADD</a>
-                            </div>
-                        </div>
-                    </nav>
-
-                </div>
-            </div>
-        </header>
-
-
-        <div class="banner-creative bg-img cover-background theme-overlay" data-scroll-index="0" data-overlay-dark="9" data-background="img/banner/banner.png" style="background-image: url(&quot;img/banner/banner.png&quot;);">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-md-12 sm-margin-50px-bottom xs-margin-20px-bottom">
-                        <div class="header-text sm-width-75 xs-width-100">
-                            <h1 class="line-height-55 md-line-height-50 xs-line-height-40 xs-font-size28 wow fadeInUp text-white" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">Time To Level-Up Your Discord Server</h1>
-                            <p class="text-white font-size16 line-height-28 xs-font-size14 xs-line-height-26 margin-30px-bottom sm-margin-20px-bottom width-80 xs-width-90 wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">Make all the haters cry and the fanboys scream by taking your Discord server to the extreme! <strong style="font-style:italic;">(Ha, rhymes.)</strong></p>
-                            <div class="wow fadeInUp story-video" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;"><a href="https://bit.ly/invitepurity" class="butn white margin-10px-right vertical-align-middle">INVITE TO DISCORD</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-6 col-md-12 sm-text-center">
-                        <div class="banner-img">
-                            <img src="./img/robot4.png" class="img-fluid float-right width-100" alt="kelA Bot">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+<body class="text-white" style="font-family: 'Source Sans Pro', sans-serif; background: #18191D">
+    <div id="loading" style="display:block;padding:200px;text-align:center;">
+        <div class="spinner-border" role="status" style="height:200px;width:200px;">
+            <span class="sr-only">Loading...</span>
         </div>
-
-
-        <div class="header-shape xs-display-none">
-            <img src="./Purity Bot_files/header-bg03.png" class="img-fluid width-100" alt="">
-        </div>
-
-
-        <section>
-            <div class="container">
-                <div class="text-center section-heading">
-                    <h2>Awesome Features</h2>
-                    <p class="width-55 sm-width-75 xs-width-95">kelA allows you to add dozens of new features to your Discord server to make it better and more interactive for your community to enjoy!</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-12 sm-margin-20px-bottom">
-                        <div class="services-block bg-light-gray padding-45px-tb padding-25px-lr sm-padding-35px-tb sm-padding-20px-lr xs-padding-30px-tb xs-padding-15px-lr last-paragraph-no-margin wow fadeInUp" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                            <div class="title-box margin-25px-bottom sm-margin-15px-bottom">
-                                <i class="fas fa-dog text-theme-color"></i>
-                                <div class="box-circle-large"></div>
-                                <div class="box-circle-small"></div>
-                            </div>
-                            <h3 class="margin-10px-bottom font-size22 md-font-size20 xs-font-size18">Good Uptime</h3>
-                            <p class="font-size16 line-height-28">kelA bot haves a good host time! 24/7!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 sm-margin-20px-bottom">
-                        <div class="services-block bg-light-gray padding-45px-tb padding-25px-lr sm-padding-35px-tb sm-padding-20px-lr xs-padding-30px-tb xs-padding-15px-lr last-paragraph-no-margin wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                            <div class="title-box margin-25px-bottom sm-margin-15px-bottom">
-                                <i class="fas fa-coins text-theme-color"></i>
-                                <div class="box-circle-large"></div>
-                                <div class="box-circle-small"></div>
-                            </div>
-                            <h3 class="margin-10px-bottom font-size22 md-font-size20 xs-font-size18">Economy</h3>
-                            <p class="font-size16 line-height-28 sm-font-size14 sm-line-height-24">Enjoy your very own fully configurable currency system to suit <strong>your</strong> needs!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 sm-margin-20px-bottom">
-                        <div class="services-block bg-light-gray padding-45px-tb padding-25px-lr sm-padding-35px-tb sm-padding-20px-lr xs-padding-30px-tb xs-padding-15px-lr last-paragraph-no-margin wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                            <div class="title-box margin-25px-bottom sm-margin-15px-bottom">
-                                <i class="fas fa-music text-theme-color"></i>
-                                <div class="box-circle-large"></div>
-                                <div class="box-circle-small"></div>
-                            </div>
-                            <h3 class="margin-10px-bottom font-size22 md-font-size20 xs-font-size18">Fast setup</h3>
-                            <p class="font-size16 line-height-28 sm-font-size14 sm-line-height-24">To setup welcomes or something just put the command <strong>welcome</strong></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12">
-                        <div class="services-block bg-light-gray padding-45px-tb padding-25px-lr sm-padding-35px-tb sm-padding-20px-lr xs-padding-30px-tb xs-padding-15px-lr last-paragraph-no-margin wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
-                            <div class="title-box margin-25px-bottom sm-margin-15px-bottom">
-                                <i class="fas fa-cogs text-theme-color"></i>
-                                <div class="box-circle-large"></div>
-                                <div class="box-circle-small"></div>
-                            </div>
-                            <h3 class="margin-15px-bottom font-size22 md-font-size20 xs-font-size18">Full Control</h3>
-                            <p class="font-size16 line-height-28 sm-font-size14 sm-line-height-24">Configure your own custom ranks, bot settings, mod roles, and more!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="bg-light-gray" data-scroll-index="2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 sm-text-center sm-margin-20px-bottom">
-                        <img src="./img/bunny.png" alt="kelA Bot commands">
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="padding-30px-left sm-no-padding padding-50px-tb md-padding-30px-tb">
-                            <h4 class="sm-margin-lr-auto margin-20px-bottom xs-width-100">Lots More To Explore</h4>
-                            <p class="margin-30px-bottom">kelA has over <strong>74</strong> commands to discover! (Including some <i>hidden</i> ones because we're mean and don't want to tell you everything 😈)</p>
-                            <ul class="list-style">
-                                <li><strong>Custom Ranks</strong> - Setup your own ranking and leveling system!</li>
-                                <li><strong>Server Shop</strong> - Setup custom items to trade / sell on your server!</li>
-                                <li><strong>Polls</strong> - Find out what people think or want!</li>
-                                <li><strong>Memes</strong> - Turn your friends (or yourself) into a meme!</li>
-
-                            </ul>
-                            <a href="commands.html" class="butn">EXPLORE ALL COMMANDS</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <section class="bg-theme">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 col-lg-4 col-md-12 sm-margin-30px-bottom">
-                        <div class="counter-box">
-                            <span class="icon margin-10px-bottom display-block text-white font-size36 xs-font-size30 xs-text-center"><i class="fas fa-server"></i></span>
-                            <h4 class="countup text-white display-block xs-text-center">22,000</h4>
-                            <div class="separator-line-horrizontal-medium-light3 bg-white margin-15px-tb xs-margin-10px-tb opacity5 center-col"></div>
-                            <p class="font-size18 sm-font-size16 font-weight-600 text-white no-margin text-center">Active Communities</p>
-                        </div>
-                    </div>
-                    <div class="col-4 col-lg-4 col-md-12 sm-margin-30px-bottom">
-                        <div class="counter-box">
-                            <span class="icon margin-10px-bottom display-block text-white font-size36 xs-font-size30 xs-text-center"><i class="fas fa-terminal"></i></span>
-                            <h4 class="countup text-white display-block xs-text-center">200</h4>
-                            <div class="separator-line-horrizontal-medium-light3 bg-white margin-15px-tb xs-margin-10px-tb opacity5 center-col"></div>
-                            <p class="font-size18 sm-font-size16 font-weight-600 text-white no-margin text-center">Commands</p>
-                        </div>
-                    </div>
-                    <div class="col-4 col-lg-4 col-md-12">
-                        <div class="counter-box">
-                            <span class="icon margin-10px-bottom display-block text-white font-size36 xs-font-size30 xs-text-center"><i class="fas fa-users"></i></span>
-                            <h4 class="countup text-white display-block xs-text-center">1,500,000</h4>
-                            <div class="separator-line-horrizontal-medium-light3 bg-white margin-15px-tb xs-margin-10px-tb opacity5 center-col"></div>
-                            <p class="font-size18 sm-font-size16 font-weight-600 text-white no-margin text-center">Unique Users</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <section class="bg-light-gray">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-md-12 sm-text-center sm-margin-20px-bottom">
-                        <img style="margin-left:auto;margin-right:auto;display:block;padding-top:10px;padding-bottom:10px;" src="./img/purity_avatar.png" alt="kelA Bot">
-                    </div>
-                    <div class="col-lg-7 col-md-12">
-                        <div class="padding-30px-left sm-no-padding">
-                            <h4 class="sm-margin-lr-auto sm-text-center xs-width-100 xs-margin-30px-bottom">So why use kelA over others?</h4>
-                            <div id="accordion" class="accordion-style">
-                                <div class="card">
-                                    <div class="card-header" id="headingOne">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-What makes it better for <strong>me</strong>?
-</button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                        <div class="card-body">
-                                            Well,
-                                            <ul class="list-style">
-                                                <li>It's in <u>constant development</u> unlike other bots, which means it gets more features and updates added.</li>
-                                                <li><u>Made by Discord users for Discord users</u>, so features are actually useful.</li>
-                                                <li>You only need <u>1 bot</u> instead of 20 to setup your server how you want.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingTwo">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-Most bots never let me customize stuff. Does kelA allow <strong>customization</strong>?
-</button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                        <div class="card-body">
-                                            In short, <strong>Yes.</strong> Change everything from rank cards background and leveling equations to welcome messages!
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header" id="headingThree">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-Can I actually <strong>get help</strong> if something goes wrong or I have a question?
-</button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                        <div class="card-body">
-                                            <strong>Definitely.</strong> Just hop on our <a href="https://discord.gg/sZEDPx3" style="color:#4e54c8;">Support Discord Server</a> and one of the Developers or a member of the community should be able to assist.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-
-
-        <footer class="cover-background" data-overlay-dark="4" style="background-image: url(./img/bg.png)" data-scroll-index="1">
-            <div class="container">
-                <div class="row margin-30px-bottom padding-30px-bottom border-bottom border-color-light-white">
-                    <div class="col-lg-4 col-md-12 sm-margin-30px-bottom text-center">
-                        <h3 class="footer-title-style text-white">Code Library</h3>
-                        <a href="https://discord.js.org/#/">
-                            <p class="font-size16 sm-font-size14">Discord.js</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-12 text-center">
-                        <h3 class="footer-title-style text-white">Support the Bot</h3>
-                        <a href="https://www.patreon.com/dannypent">
-                            <p class="font-size16 sm-font-size14">Patreon</p>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-12 sm-margin-30px-bottom text-center">
-                        <h3 class="footer-title-style text-white">Developer Email</h3>
-                        <a href="/cdn-cgi/l/email-protection#1571747b7b6c65707b61557278747c793b767a78">
-                            <p class="font-size16 sm-font-size14"><span class="__cf_email__" data-cfemail="76121718180f0613180236111b171f1a5815191b">[email&#160;protected]</span></p>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <ul class="social-icon-style2 no-margin">
-                            <li>
-                                <a href="https://twitter.com/purity_bot"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://discord.gg/sZEDPx3"><i class="fab fa-discord"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bar">
-                <div class="container">
-                    <p class="xs-font-size13">© 2020 <a href="/">kelA Bot</a></p>
-                </div>
-            </div>
-        </footer>
-
     </div>
+    <div id="content" style="display:none;">
+        <div class="rounded-lg NewModal object-center" id="wumpusModal" style="padding: 1em; background-color: rgba(0, 0, 0, 0.4); z-index: 1200;">
+            <div class="rounded-md p-4 object-center modal-content-1 bounce-in-fwd" style="text-align: center; background: #383b45;">
+                <div id="A">
+                    <h4 class="text-center text-xl font-bold mb-2 text-white text-left uppercase p-3">
+                        Play Hide and Seek With Wumpus!
+                    </h4>
+                    <div class="text-center" style="text-align: left; line-height: 10px;">
+                        Search the page for wumpus as he hides.<br><br>Each time you see him, click for a point!
+                    </div>
+                    <br />
+                    <button id="startQuest" class="grow py-3 px-5 mx-auto text-sm font-bold" style="outline: none; border-radius: 4px; float: right; background: #7289da; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;">
+Yes Please!
+</button>
+                    <button onclick="document.getElementById('wumpusModal').style.display = 'none'" id="close2" class="grow py-3 px-5 mx-auto text-sm font-bold text-white" type="button" style="outline: none; border-radius: 4px; float: LEFT; background: #000000; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;">
+Nah
+</button>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-lg NewModal object-center" id="wumpusDone" style="padding: 1em; background-color: rgba(0, 0, 0, 0.4); z-index: 1200;">
+            <div class="bounce-in-fwd" style="text-align: center; background: #383b45;border-radius:10px;width:44%;margin-left:60%">
+                <div id="A">
+                    <h4 class="text-center text-xl font-bold mb-2 text-white text-left uppercase p-3">
+                        You've Won!
+                    </h4>
+                    <div class="text-center" style="text-align: left; line-height: 10px;">
+                        Thanks for playing hide and seek with wumpus, we hope you had fun!<br><br><br>
+                        <button onclick="document.getElementById('wumpusDone').style.display = 'none'" class="grow py-3 px-5 mx-auto text-sm font-bold" style="outline: none; border-radius: 4px; background: #7289da; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;">
+Finish
+</button>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <center>
+            <div id="wumpusNav" style="position: fixed; margin-left: auto; margin-right: auto; left: 0; right: 0; text-align: center;height:50px;width:50%;margin-top:51%;z-index:1;display:none;z-index:100" class="animate__animated animate__fadeInUp alert alert-info fixed">Searching for Wumpus (<span id="howManyFound">0</span>/7 Found) <button class="btn btn-danger" style="float:right;margin-top:-8px;display:none;" onclick="location.reload()">Exit</button></div>
+        </center>
+        <nav class="navbar navbar-expand-lg" style="background-color:#18191D;height:10%;padding:60px;height:30px;margin-bottom:-150px;z-index:1">
+            <a style="color:white;cursor: pointer;font-size:2.3em" class="navbar-brand font-bold" href="./"><span><img src="./images/logo.png" width="65px;" style="margin-top:-5px;display:inline;" /> DSC.GG</span>
+</a>
 
+            <img draggable="false" id="wumpus3" class="wumpus" style="width:95px;position:absolute;margin-left:60%;margin-top:-3%;display:none;z-index:1;cursor:pointer;transform: rotate(180deg) scaleX(-1);">
+            <ul class="navbar-nav ml-5">
+                <a href="./top" style="color:white">
+                    <li class="nav-item mr-4 font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Top Links</li>
+                </a>
+                <a href="./premium" style="color:white">
+                    <li class="nav-item mr-4 font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Premium</li>
+                </a>
+                <a href="./api" style="color:white">
+                    <li class="nav-item font-bold mr-4" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">API</li>
+                </a>
+                <a href="./style" style="color:white">
+                    <li class="nav-item mr-4 font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Bot.style</li>
+                </a>
+                <a href="./discord" style="color:white">
+                    <li class="nav-item font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Discord</li>
+                </a>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="name" style="font-size:1.2em;margin-top:12%;cursor: pointer;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User#0000</li>
+                <li class="nav-item dropdown" id="pfp">
+                    <a style="color:white;cursor: pointer;font-size:1.2em;margin-bottom:-20px" class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <p><img id="avatar" src="https://cdn.discordapp.com/avatars/684155404078415890/a_1648511f67e20798d59251140e4ea698.gif?size=256" style="width:50px;border-radius:50px" /></p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item bg-dark text-light" href="dashboard">Dashboard</a>
+                        <a class="dropdown-item bg-dark text-light" href="https://dsc.gg/discord">Discord</a>
+                        <a class="dropdown-item bg-dark text-light" href="logout">Logout</a>
+                    </div>
+                </li>
+                <a href="./login" style="color:white;text-decoration:none;">
+                    <li class="nav-item" id="login_text" style="font-size:1.2em;margin-top:12%;cursor: pointer;display:none;"></li>
+                </a>
+            </ul>
+        </nav>
+        <div>
+            <div class="container mx-auto px-6" style="text-align: center">
+                <div class="container mt-4 mb-5"><br><br>
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="text-4xl font-bold mb-2 text-white text-center" style="margin-top:180px;font-size:3em">
+                                Custom vanity url's for your <span id="break"></span><span id="typed" style="color:#7289da"></span>
+                            </h2>
+                            <h3 class="text-xl mb-8 text-gray-400 text-center">
+                                Short and memorable vanity links without the extra hassle. No boosts needed.
+                            </h3><br><br><br>
+                            <img draggable="false" id="wumpus" onclick="document.getElementById('wumpusModal').style.display = 'block'" class="animate__animated animate__bounce" style="width:95px;position:absolute;margin-left:52%;margin-top:-6%;display:none;cursor:pointer">
+                            <button id="homepage_btn_1" onclick="location.href = './login'" class="rounded-full py-3 px-16 mx-auto text-sm grow" style="outline: none; background: #7289DA; text-rendering: optimizeLegibility;font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;line-height: 1.15;font-size:1.2em">
+Get Started - It's Free!
+</button>
+                            <ul class="navbar-nav mt-2" id="mobileNav" style="display:none">
+                                <span style="font-size:1.1em">
+<a href="./top" style="color:white"><span class="nav-item font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Top Links</span></a>
+                                | <a href="./premium" style="color:white"><span class="nav-item font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Premium</span></a> | <a href="./api" style="color:white"><span class="nav-item font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">API</span></a>                                | <a href="https://dsc.gg/discord" style="color:white"><span class="nav-item font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Discord</span></a>
+                                </span>
+                            </ul>
+                        </div><br><br><br><br><br><br>
 
-
-
-    <a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
-
-
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="./Purity Bot_files/core.min.js.download" type="c81aa78a559e5ac29d52010c-text/javascript"></script>
-
-    <script src="./Purity Bot_files/search.js.download" type="c81aa78a559e5ac29d52010c-text/javascript"></script>
-
-    <script src="./Purity Bot_files/main.js.download" type="c81aa78a559e5ac29d52010c-text/javascript"></script>
-
-
-
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="c81aa78a559e5ac29d52010c-|49" defer=""></script>
+                    </div>
+                </div>
+            </div>
+            <footer style="background: #2a2833;margin-top:-8%">
+                <svg viewBox="0 0 120 28" style="background: #18191D;">
+<defs>
+<filter id="goo">
+<feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur" />
+<feColorMatrix in="blur" mode="matrix" values="
+               1 0 0 0 0
+               0 1 0 0 0
+               0 0 1 0 0
+               0 0 0 13 -9" result="goo" />
+<xfeBlend in="SourceGraphic" in2="goo" />
+</filter>
+<path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+</defs>
+<use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2"></use>
+<use id="wave2" class="wave" xlink:href="#wave" x="0" y="0"></use>
+<use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+</svg>
+                <img draggable="false" id="wumpus7" class="wumpus7" style="transform: rotate(-90deg) scaleX(-1);width:95px;position:relative; float:right; margin-top:10%;margin-right:-20px;z-index:100;cursor:pointer;display:none;">
+                <div style="background: rgba(171, 205, 239, 0.0)">
+                    <div class="container cc_cursor"><br><br>
+                        <div class="row align-items-center cc_cursor">
+                            <div class="col-lg-6 order-lg-2 cc_cursor">
+                                <div class="p-5 cc_cursor">
+                                    <img style="border-radius:10px;" class="img-fluid cc_cursor" src="https://media.discordapp.net/attachments/757389289146286110/767746973402660884/few.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-1 cc_cursor">
+                                <div class="p-5 text-center cc_cursor">
+                                    <h4 class="text-4xl font-bold mb-10 text-white text-center">Get the shortest link around</h4>
+                                    <h4 class="hallo-text cc_cursor">Our 3-letter domain makes it easy to create your short and attractive url that fits your server. Say goodbye to bulky discord.gg codes.</h4><br>
+                                    <button style="outline: none; background: #ffffff; text-rendering: optimizeLegibility;font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;line-height: 1.15;font-size:1.2em;color: #000000" class="grow rounded-full py-3 px-10 mx-auto text-sm cc_pointer">Claim a Vanity Link</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br><br><br><br><br>
+                        <div class="row align-items-center cc_cursor">
+                            <div class="col-lg-6 order-lg-1 cc_cursor">
+                                <div class="p-5 cc_cursor">
+                                    <img draggable="false" id="wumpus4" class="wumpus4" style="transform: rotate(90deg) scaleX(-1);width:95px;position:absolute;margin-left:76%;margin-top:35%;display:block;z-index:1;cursor:pointer;display:none;">
+                                    <img draggable="false" id="wumpus2" style="transform: rotate(90deg) scaleX(-1);width:95px;position:absolute;float:left;display:block;margin-left:-10px;z-index:1;cursor:pointer;display:none;">
+                                    <img style="border-radius:10px;z-index:100" class="img-fluid cc_cursor" src="https://i.ibb.co/y58gtc7/img.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-2 cc_cursor">
+                                <div class="p-5 text-center cc_cursor">
+                                    <h4 class="text-4xl font-bold mb-10 text-white text-center">Automatic Embeds</h4>
+                                    <h4 class="hallo-text cc_cursor">DSC.GG discord embed's support comes baked into the package. Generate clean, good-looking and helpful embeds to further increase your clickrate.</h4><br>
+                                    <button onclick="location.href = './dashboard'" style="outline: none; background: #ffffff; text-rendering: optimizeLegibility;font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;line-height: 1.15;font-size:1.2em;color: #000000" class="grow rounded-full py-3 px-10 mx-auto text-sm cc_pointer">Create a Link Now</button>
+                                </div>
+                            </div>
+                        </div><br><br><br><br><br>
+                        <div class="row align-items-center cc_cursor">
+                            <div class="col-lg-6 order-lg-2 cc_cursor">
+                                <div class="p-5 cc_cursor">
+                                    <img style="border-radius:10px;" class="img-fluid cc_cursor" src="https://i.ibb.co/9p5G9Q2/img.png" alt="">
+                                    <img draggable="false" id="wumpus6" class="wumpus6" style="transform: rotate(-90deg) scaleX(-1);width:95px;position:absolute;margin-left:-15%;margin-top:-20%;z-index:1;cursor:pointer;z-index:1;display:none;">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-1 cc_cursor">
+                                <div class="p-5 text-center cc_cursor">
+                                    <h4 class="text-4xl font-bold mb-10 text-white text-center">See how your link is performing</h4>
+                                    <h4 class="hallo-text cc_cursor">View your link analytics to track how many clicks you are receiving, by how many people, on what device, and at what time.</h4><br>
+                                    <button onclick="location.href = './dashboard'" style="outline: none; background: #ffffff; text-rendering: optimizeLegibility;font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;line-height: 1.15;font-size:1.2em;color: #000000" class="grow rounded-full py-3 px-10 mx-auto text-sm cc_pointer">Try It Out</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-20" style="margin-top: 5em">
+                        <div style="background: rgba(171, 205, 239, 0.0)">
+                            <div class="px-9" style="background: rgba(171, 205, 239, 0.0)">
+                                <h2 class="text-4xl font-bold mb-10 text-white text-center">Why should you choose DSC.GG?</h2><br>
+                                <div class="cards cc_cursor" style="background: rgba(171, 205, 239, 0.0)">
+                                    <div class="" style="background: rgba(171, 205, 239, 0.0);z-index:10">
+                                        <div class="rounded-lg" style="background: #202225; height: 60vh;">
+                                            <img class="mx-auto p-10" src="https://image.flaticon.com/icons/svg/2885/2885673.svg" style="width: 60%; height: 60%;margin-bottom:-20px">
+                                            <h2 class="text-2xl mb-2 text-white text-center">
+                                                Stand out among the crowd
+                                            </h2>
+                                            <h3 class="text-lg mb-8 text-gray-400 text-center m-4 cc_cursor">Our domain is shorter and cleaner than many similar alternative services. It also closely resembles the discord.gg domain, meaning users will understand the purpose of the link from the start.
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="" style="background: rgba(171, 205, 239, 0.0);z-index:10">
+                                        <div class="rounded-lg" style="background: #202225; height: 60vh">
+                                            <img class="mx-auto p-10" src="https://image.flaticon.com/icons/svg/921/921591.svg" style="width: 60%; height: 60%;margin-bottom:-20px">
+                                            <h2 class="text-2xl mb-2 text-white text-center">No ads, splash pages, click limits, or catches
+                                            </h2>
+                                            <h3 class="text-lg mb-7 text-gray-400 text-center m-4 cc_cursor">Unlike similar alternatives, your link will be an instant redirect to your server. We don't show any ads, infact we don't even show a splash page before redirecting the user. They are redirected instantly.
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img draggable="false" id="wumpus8" style="width:95px;position:relative;margin-bottom:0%;cursor:pointer;transform: rotate(-80deg); float:right;bottom:-70px;display:none">
+                        <div class="container mx-auto px-6" style="text-align: center">
+                            <img draggable="false" id="wumpus5" class="wumpus" style="width:95px;position:absolute;margin-left:78%;margin-top:-1%;cursor:pointer;transform: rotate(180deg) scaleX(-1);display:none;">
+                            <br><br><button id="homepage_btn_2" onclick="location.href = './dashboard'" class="grow rounded-full py-3 px-10 mx-auto text-sm cc_pointer" style="outline: none; background: #ffffff; text-rendering: optimizeLegibility;font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;line-height: 1.15;font-size:1.2em;color: #000000">I'm Ready to Get Started!</button>
+                        </div>
+                    </div>
+                    <div class="container mx-auto px-6 pt-10 pb-6 mb-0">
+                        <hr><br><br>
+                        <div class="flex flex-wrap">
+                            <div class="w-full md:w-1/4 text-center md:text-center">
+                                <h5 class="uppercase mb-6 font-bold">Useful Links</h5>
+                                <ul class="mb-4">
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="./dashboard" class="hover:underline text-gray-600 hover:text-gray-500">Dashboard</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="./top" class="hover:underline text-gray-600 hover:text-gray-500">Top Links</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="./premium" class="hover:underline text-gray-600 hover:text-gray-500">Premium</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/4 text-center md:text-center">
+                                <h5 class="uppercase mb-6 font-bold">Developers</h5>
+                                <ul class="mb-4">
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="../api" class="hover:underline text-gray-600 hover:text-gray-500">Our API</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="https://docs.dsc.gg/wrappers" class="hover:underline text-gray-600 hover:text-gray-500">API Wrappers</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="https://dsc.gg/discord" class="hover:underline text-gray-600 hover:text-gray-500">Get Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/4 text-center md:text-center">
+                                <h5 class="uppercase mb-6 font-bold">Legal</h5>
+                                <ul class="mb-4">
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="../legal/tos" class="hover:underline text-gray-600 hover:text-gray-500">Terms of Service</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="../legal/privacy" class="hover:underline text-gray-600 hover:text-gray-500">Privacy Policy</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="/cdn-cgi/l/email-protection#e48881838588a4809787ca8383" class="hover:underline text-gray-600 hover:text-gray-500">Make an Inquiry</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="w-full md:w-1/4 text-center md:text-center">
+                                <h5 class="uppercase mb-6 font-bold">Social</h5>
+                                <ul class="mb-4">
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="https://dsc.gg/discord" class="hover:underline text-gray-600 hover:text-gray-500">Discord</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="/cdn-cgi/l/email-protection#5c2f292c2c332e281c382f3f723b3b" class="hover:underline text-gray-600 hover:text-gray-500">Email</a>
+                                    </li>
+                                    <li class="mt-2">
+                                        <a style="color:#7289DA" href="https://twitter.com/gg_dsc" class="hover:underline text-gray-600 hover:text-gray-500">Twitter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </footer>
+            </div>
+            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>
+<script src="./js/index.js"></script>
 
 </html>

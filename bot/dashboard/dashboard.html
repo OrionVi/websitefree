@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>dsc.gg | Short Links</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <script async src="https://arc.io/widget.js#ZSvK9Soa"></script>
+    <script src="https://unpkg.com/notie"></script>
+    <link href="./css/hover.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/dash.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="./js/dash.js"></script>
+    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.LogRocket && window.LogRocket.init('bvkayg/dscgg');
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="./js/typed.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function onFocusIn(slug) {
+            document.getElementById("edit-" + slug).style.display = "initial";
+        }
+
+        function onFocusOut(slug) {
+            document.getElementById("edit-" + slug).style.display = "none";
+            if (document.getElementById("text-" + slug).getAttribute("data-before") !== document.getElementById("text-" + slug).value) {
+                document.getElementById("form-" + slug).submit();
+            }
+        }
+
+        function hideA(x, other) {
+            if (x.checked) {
+                x.style.background = "#7289DA";
+                x.style.border = "#7289DA";
+                other.style.background = "#303237";
+                other.style.border = "#000000";
+                document.getElementById("A").style.display = "none";
+                document.getElementById("B").style.display = "initial";
+            }
+        }
+
+        function hideB(x, other) {
+            if (x.checked) {
+                x.style.background = "#7289DA";
+                x.style.border = "#7289DA";
+                other.style.background = "#303237";
+                other.style.border = "#000000";
+                document.getElementById("B").style.display = "none";
+                document.getElementById("A").style.display = "initial";
+            }
+        }
+    </script>
+</head>
+
+<body class="text-white" style="font-family: 'Source Sans Pro', sans-serif; background: #18191d;">
+    <div id="loading" style="display:block;padding:200px;text-align:center;">
+        <div class="spinner-border" role="status" style="height:200px;width:200px;">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div id="content" style="display:none;">
+        <div class="rounded-lg NewModal object-center" id="NewModal" style="padding: 1em; background-color: rgba(0, 0, 0, 0.4); z-index: 1200">
+            <div class="rounded-md pl-3 pr-3 pb-3 object-center modal-content-1 bounce-in-fwd" style="text-align: center; background: #383b45;width:42%;">
+                <div id="A">
+                    <h4 class="text-center text-4xl font-bold mb-2 text-white text-left uppercase p-3">
+                        Create a Vanity URL
+                    </h4>
+                    <div class="text-center" style="text-align: left; line-height: 10px;">
+                        Choose a Link Type<br><br>
+                        <div class="radio-toolbar" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;">
+                            <input id="radioServer" type="radio" value="server" onchange="change('server')" name="type" checked="">
+                            <label for="radioServer">Server</label>
+                            <input id="radioBot" type="radio" value="bot" onchange="change('bot')" name="type">
+                            <label for="radioBot">Bot</label>
+                            <input id="radioTemplate" type="radio" value="template" onchange="change('template')" name="type">
+                            <label for="radioTemplate">Template</label>
+                        </div><span id="clientId" style="display:none;"><br><br>Enter Your Bot Client ID<br><br><span style="font-size:1.1em"><input id="clientIdInput" class="hover-blurple" placeholder="192893239" style="border-radius: 5px; padding: 2px; font-size:1.1em;background: #16171a;width:50%" /></span></span>
+                        <br><br><br>Enter Your <span id="typeOfInvite">Server Invite</span><br><br><span style="font-size:1.1em"><input id="inLink" placeholder="https://discord.gg/something" class="hover-blurple" style="border-radius: 5px; padding: 2px; font-size:1.1em;background: #16171a;width:50%" /></span>
+                        <br><br><br><br>Choose Your Short Link<br><br><span style="font-size:1.1em">
+ <b>dsc.gg/</b>
+<input placeholder="my-link" id="shortLink" class="hover-blurple" style="border-radius: 5px; padding: 2px; font-size:1.1em;background: #16171a;width:50%" /></span>
+                    </div>
+                    <br />
+                    <div id="errorDiv"></div>
+                    <button onclick="submitLink()" class="grow py-3 px-5 mx-auto text-sm font-bold" style="outline: none; border-radius: 4px; float: right; background: #7289da; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;">
+Create
+</button>
+                    <button onclick="document.getElementById('NewModal').style.display = 'none'" id="close2" class="grow py-3 px-5 mx-auto text-sm font-bold text-white" type="button" style="outline: none; border-radius: 4px; float: LEFT; background: #000000; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;">
+Cancel
+</button>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-lg NewModal object-center" id="updateModal" style="padding: 1em; background-color: rgba(0, 0, 0, 0.4); z-index: 1200">
+            <div class="rounded-md pl-3 pr-3 pb-3 object-center modal-content-1 bounce-in-fwd" style="text-align: center; background: #383b45;width:42%;">
+                <div id="A">
+                    <h4 class="text-center text-4xl font-bold mb-2 text-white text-left uppercase p-3">
+                        <center><img src="https://www.flaticon.com/svg/static/icons/svg/3481/3481340.svg" width="30%" style="padding:30px;" /></center>
+                        A New Update is Here!
+                    </h4>
+                    <h3>
+                        <span class="font-bold">What's New:</span><br><span style="font-size:0.8em">
+<span class="text-warning">[Update]</span> - Analytics now reset every week</span>
+                        <br><span style="font-size:0.8em"><span class="text-warning">[Update]</span> - Free limit increased from 3 to 4 total links</span>
+                        <br><span style="font-size:0.8em"><span class="text-success">[New]</span> - Buttons now have a grow effect on hover</span>
+                        <br><span style="font-size:0.8em"><span class="text-warning">[Update]</span> - The navbar has been completely remade</span>
+                        <br><span style="font-size:0.8em"><span class="text-warning">[Update]</span> - We updated our logo, how does it look?</span>
+                        <br><span style="font-size:0.8em"><span class="text-success">[New]</span> - New 'Top Links' page to show the best links</span>
+                        <br><span style="font-size:0.8em"><span class="text-success">[New]</span> - The new Premium landing page is here</span>
+                        <br><span style="font-size:0.8em"><span class="text-info">[Fix]</span> - Bot invite links now work again</span>
+                        <br><span style="font-size:0.8em"><span class="text-info">[Fix]</span> - Site is now mobile friendly even on smaller devices</span>
+                    </h3>
+                    <br />
+                    <div id="errorDiv"></div>
+                    <button onclick="clearUpdate()" class="grow py-3 px-5 mx-auto text-sm font-bold" style="font-size:1.3em;outline: none; border-radius: 4px; float: center; background: #7289da; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;">
+Okay
+</button>
+                </div>
+            </div>
+        </div>
+        <div class="rounded-lg NewModal object-center" id="tooManyLinks" style="padding: 1em; background-color: rgba(0, 0, 0, 0.4); z-index: 1200;">
+            <div class="rounded-md p-4 object-center modal-content-1 bounce-in-fwd" style="text-align: center; background: #383b45;">
+                <div id="A">
+                    <h4 class="text-center text-xl font-bold mb-2 text-white text-left uppercase p-3">
+                        Too Many Links!
+                    </h4>
+                    <div class="text-center" style="text-align: left; line-height: 10px;">
+                        You have reached the max of 4 links allowed for free users.<br><br>Consider buying premium for unlimited links
+                    </div>
+                    <br />
+                    <button onclick="location.href = './premium'" class="grow py-3 px-5 mx-auto text-sm font-bold" style="outline: none; border-radius: 4px; float: right; background: #7289da; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;">
+Get Premium
+</button>
+                    <button onclick="document.getElementById('tooManyLinks').style.display = 'none'" id="close2" class="grow py-3 px-5 mx-auto text-sm font-bold text-white" type="button" style="outline: none; border-radius: 4px; float: LEFT; background: #000000; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;">
+Okay
+</button>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg" style="background-color:#18191D;height:10%;padding:60px;height:30px;margin-bottom:-150px;">
+            <a style="color:white;cursor: pointer;font-size:2.3em" class="navbar-brand font-bold" href="./"><span><img src="./images/logo.png" width="65px;" style="margin-top:-5px;display:inline;" /> DSC.GG</span></a>
+
+            <ul class="navbar-nav ml-5">
+                <a href="./top" style="color:white">
+                    <li class="nav-item mr-4 font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Top Links</li>
+                </a>
+                <a href="./premium" style="color:white">
+                    <li class="nav-item mr-4 font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Premium</li>
+                </a>
+                <a href="./api" style="color:white">
+                    <li class="nav-item font-bold mr-4" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">API</li>
+                </a>
+                <a href="./style" style="color:white">
+                    <li class="nav-item mr-4 font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Bot.style</li>
+                </a>
+                <a href="./discord" style="color:white">
+                    <li class="nav-item font-bold" style="font-size:1.2em;margin-top:-10px;cursor: pointer;">Discord</li>
+                </a>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="name" style="font-size:1.2em;margin-top:12%;cursor: pointer;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User#0000</li>
+                <li class="nav-item dropdown" id="pfp">
+                    <a style="color:white;cursor: pointer;font-size:1.2em;margin-bottom:-20px" class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <p><img id="avatar" src="https://cdn.discordapp.com/avatars/684155404078415890/a_1648511f67e20798d59251140e4ea698.gif?size=256" style="width:50px;border-radius:50px" /></p>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item bg-dark text-light" href="./">Homepage</a>
+                        <a class="dropdown-item bg-dark text-light" href="https://dsc.gg/discord">Discord</a>
+                        <a class="dropdown-item bg-dark text-light" href="logout">Logout</a>
+                    </div>
+                </li>
+                <a href="./login" style="color:white;text-decoration:none;">
+                    <li class="nav-item" id="login_text" style="font-size:1.2em;margin-top:12%;cursor: pointer;display:none;"></li>
+                </a>
+            </ul>
+        </nav>
+        <div class="rounded-lg" style="margin: 7em; padding: 1em;margin-top:12%">
+            <button id="openButton" name="openButton" class="grow openButton rounded-full py-3 px-5 mx-auto text-sm" style="outline: none; float: right; background: #7289da; text-rendering: optimizeLegibility; font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif; line-height: 1.15;font-size:1.1em;">
+Create New Link
+</button>
+            <h2 class="text-4xl font-bold mb-2 text-white text-left">
+                Announcements
+            </h2>
+            <div id="announcements" style="width:60%"></div><br>
+            <div class="row">
+                <div class="col-8">
+                    <h2 class="text-4xl font-bold mb-2 text-white text-left">
+                        <span id="yourLinkHeader">Your Shortened Links</span> <span class="badge badge-info align-middle" style="font-size:0.5em"><span id="total_links">0</span>/4 <span id="freeLinksUsed">Free Links Used</span></span>
+                    </h2>
+                    <br />
+                    <div id="insert_links">
+                    </div>
+                </div>
+                <div class="col-4" id="premiumStatusThingy">
+                    <div class="hover-blurple" style="padding:20px;border-radius:10px;">
+                        <h2 class="text-4xl font-bold mb-2 text-white text-left">
+                            Premium Status
+                        </h2>
+                        <h4 class="text-danger">Not Subscribed</h4>
+                        <h5><br><b>Benefits of premium:</b><br><i class="fas fa-check text-success"></i> Unlimited Short Links
+                            <br><i class="fas fa-check text-success"></i> Advanced Analytics
+                            <br><i class="fas fa-check text-success"></i> Extra Intergrations
+                            <br><i class="fas fa-check text-success"></i> No Footer Credit
+                            <br><i class="fas fa-check text-success"></i> Special Link Cards
+                            <br><i class="fas fa-check text-success"></i> Premium Support<br>
+                            <br><button data-toggle="collapse" data-target="#couponCollapse" aria-expanded="false" aria-controls="couponCollapse" class="grow rounded-full text-sm px-3 mx-auto animate hover-pointer" style="
+                    outline: none; 
+                    height: 35px;
+                    position: relative;
+                    bottom: 2.5px;
+                    left: 5px;
+                    color:black;
+                    background: #D4AF37;
+                    text-rendering: optimizeLegibility;
+                    font-size:0.9em;
+                    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+                    line-height: 1.15;
+                ">Upgrade to Premium</button>
+                        </h5>
+                        <div class="collapse" id="couponCollapse">
+                            <div class="card card-body bg-dark">
+                                <h5>Got a Coupon?</h5>
+                                <input id="coupon" placeholder="Enter a coupon code here" class="hover-blurple" style="border-radius: 5px; padding: 10px; font-size:0.9em; background: #16171a" />
+                                <div class="alert alert-danger" id="couponError" style="display:none;padding-top:5px;padding-bottom:5px;margin-top:5px;">Coupon code can't be blank</div>
+                                <div class="alert alert-success" id="couponSuccess" style="display:none;padding-top:5px;padding-bottom:5px;margin-top:5px;">Coupon will be applied at checkout</div>
+                                <span><button onclick="tryCoupon()" class="bg-success mt-2 rounded-full text-sm px-3 mx-auto animate hover-pointer text-left" style="
+                    outline: none; 
+                    height: 35px;
+                    position: relative;
+                    bottom: 2.5px;
+                    left: 5px;
+                    color:white;
+                    text-rendering: optimizeLegibility;
+                    font-size:0.9em;
+                    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+                    line-height: 1.15;
+                ">Apply</button> &nbsp<button onclick="location.href = './get-premium'" class="mt-2 rounded-full text-sm px-3 mx-auto animate hover-pointer text-left" style="
+                    outline: none; 
+                    height: 35px;
+                    position: relative;
+                    bottom: 2.5px;
+                    left: 5px;
+                    color:white;
+                    background: #7289da;
+                    text-rendering: optimizeLegibility;
+                    font-size:0.9em;
+                    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+                    line-height: 1.15;
+                ">Continue Without Coupon</button></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <center>
+                    <div class="col-10 hover-blurple" style="padding:20px;border-radius:10px;margin-top:30px;margin-bottom:30px;display:none;" id="premiumStatusThingy2">
+                        <h2 class="text-4xl font-bold mb-2 text-white text-left">
+                            Premium Status
+                        </h2>
+                        <h4 class="text-danger">Not Subscribed</h4>
+                        <h5><br><b>Benefits of premium:</b><br><i class="fas fa-check text-success"></i> Unlimited Short Links
+                            <br><i class="fas fa-check text-success"></i> Advanced Analytics
+                            <br><i class="fas fa-check text-success"></i> Extra Intergrations
+                            <br><i class="fas fa-check text-success"></i> No Footer Credit
+                            <br><i class="fas fa-check text-success"></i> Special Link Cards
+                            <br><i class="fas fa-check text-success"></i> Premium Support<br>
+                            <br><button data-toggle="collapse" data-target="#couponCollapse2" aria-expanded="false" aria-controls="couponCollapse2" class="grow rounded-full text-sm px-3 mx-auto animate hover-pointer" style="
+                    outline: none; 
+                    height: 35px;
+                    position: relative;
+                    bottom: 2.5px;
+                    left: 5px;
+                    color:black;
+                    background: #D4AF37;
+                    text-rendering: optimizeLegibility;
+                    font-size:0.9em;
+                    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+                    line-height: 1.15;
+                ">Upgrade to Premium</button>
+                        </h5>
+                        <div class="collapse" id="couponCollapse2">
+                            <div class="card card-body bg-dark">
+                                <h5>Got a Coupon?</h5>
+                                <input id="coupon2" placeholder="Enter a coupon code here" class="hover-blurple" style="border-radius: 5px; padding: 10px; font-size:0.9em; background: #16171a" />
+                                <div class="alert alert-danger" id="couponError2" style="display:none;padding-top:5px;padding-bottom:5px;margin-top:5px;">Coupon code can't be blank</div>
+                                <div class="alert alert-success" id="couponSuccess2" style="display:none;padding-top:5px;padding-bottom:5px;margin-top:5px;">Coupon will be applied at checkout</div>
+                                <span><button onclick="tryCoupon()" class="grow bg-success mt-2 rounded-full text-sm px-3 mx-auto animate hover-pointer text-left" style="
+                    outline: none; 
+                    height: 35px;
+                    position: relative;
+                    bottom: 2.5px;
+                    left: 5px;
+                    color:white;
+                    text-rendering: optimizeLegibility;
+                    font-size:0.9em;
+                    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+                    line-height: 1.15;
+                ">Apply</button> <button onclick="location.href = './get-premium'" class="mt-2 rounded-full text-sm px-3 mx-auto animate hover-pointer text-left" style="
+                    outline: none; 
+                    height: 35px;
+                    position: relative;
+                    bottom: 2.5px;
+                    left: 5px;
+                    color:white;
+                    background: #7289da;
+                    text-rendering: optimizeLegibility;
+                    font-size:0.9em;
+                    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+                    line-height: 1.15;
+                ">Continue Without Coupon</button></span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </center>
+        <script>
+            has_3 = false
+            // Get the modal
+            var modal = document.getElementById("NewModal");
+            var modal2 = document.getElementById("tooManyLinks");
+
+            // Get the button that opens the modal
+            var btn = document.getElementsByName("openButton")[0];
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementById("close");
+            var span2 = document.getElementById("close2");
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                if (window.has_3 === true) {
+                    modal2.style.display = "block";
+                } else {
+                    modal.style.display = "block";
+                }
+            };
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+    </div>
+    <button id="clickable" class="btn btn-info" style="
+    position: fixed;
+    z-index:1000;
+    bottom: 500px;
+    right:0;
+    width: 180px;
+    margin-right:-75px;
+    transform: rotate(-90deg);
+    " onclick="document.getElementById('widget').style.display = 'block';document.getElementById('clickable').style.display = 'none'">Support</button>
+    <center>
+        <div id="widget" class="card animate__animated animate__bounceIn bg-dark" style="
+        width:24%;
+        height:400px;
+        overflow-x:hidden;
+        position: fixed;
+        bottom: 220px;
+        right:0;
+        display:none;
+        ">
+            <div class="card-body">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828665.svg" style="width:20px;float:left;margin-left:-10px;margin-top:-10px;cursor:pointer" onclick="document.getElementById('widget').style.display = 'none';document.getElementById('clickable').style.display = 'block'"
+                /><u>Chat with Support</u><br><br>
+                <div id="chat" style="margin-bottom:10%;overflow-y:scroll;height:270px;background: #16171a;border-radius:10px;"><i id="no_messages"><br>No messages yet</i></div>
+
+                <body>
+                    <form action="" style="margin-top:100px;position: absolute; 
+            bottom: 0; 
+            width: 100%; 
+            height: 50px; ">
+                        <span id="sendIt"><input id="m" autocomplete="off" class="hover-blurple" style="width:90%;margin-left:-10%;display:inline-block;align-content:center;border-radius: 5px; padding: 10px; font-size:1.1em; background: #16171a;height:40px;" placeholder="Type your message and hit enter" /></span>
+                    </form>
+                </body>
+            </div>
+        </div>
+    </center>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="./js/support.js"></script>
+
+</html>
